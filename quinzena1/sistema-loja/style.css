@@ -14,12 +14,12 @@
 .meio {
     background-image: url("img/aerw48.webp");
     color: #f0ffff;
-    text-align:center;
+   /* text-align:center; */
     background-position: center;
     background-repeat: no-repeat;
     background-color: black;
     padding: 20px;
-    justify-content: center;
+  /*  justify-content: center; */
 }
 .rodape {
     background-color: rgb(1, 46, 7);
@@ -41,22 +41,34 @@
     border: 0.3vh solid #cfd1d3;
     max-width: 36vh;
 }
-#link-foto {
+#link-foto, #descricao, #preço, #quantidade {
     width: 50vh;
     max-width: 35vh;
 }
-#descricao {
-    width: 50vh;
-    max-width:35vh;
-}
-#preço {
-    width: 50vh;
-    max-width:35vh;
-}
-#quantidade {
-    width: 50vh;
-    max-width:35vh;
-}
-table {
+table, tr, th {
     border: 0.3vh solid #cfd1d3;  
+}
+ol, ul, table {
+    display: inline-block;
+}
+label {
+    display: block;
+}
+.quantidade {
+    width: 40px;
+}
+#inicio {
+    text-align:center;
+}
+.tabestoque tr:nth-child(even) {
+    background-color: orange;
+}
+.tabestoque tr:nth-child(odd) {
+    background-color: rgb(132, 0, 255);
+}
+.histvendas {
+    background-color: black;
+}
+button:active {
+    background-color:blue;
 }
