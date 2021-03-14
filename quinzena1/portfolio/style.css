@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montaga', serif;
+}
+body {
+    background-color: rgb(11, 83, 67);
+    text-align: center;
+}
+#inicio {
+    background-image: url("img/magia.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.header {
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+    color: cornsilk;
+}
+.d20 {    
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-image: url("img/d20.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.d20:hover {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-image: url("img/doug.jpg");
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding:3%;
+}
+.d20:active{
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background-image: url("img/yinyang.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding:5%;
+}
+footer {
+    width: 100vw;
+    color: #f0ffff;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+}
+.facebook, .linkedin, .github  {
+    background-color: white;
+}
+.acerto {
+    font-size: 50px;
+    color: rgb(241, 4, 4);
+}
+.menu {
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+}
+.fotodoug {
+    height: 300px;
+}
+.experiencia {
+    margin-left: 400px;
+    text-align: justify;
+}
+#meuemail {
+    color: blanchedalmond;
+}
+.infocontato, .contato {
+    display: inline-block;
+    background-image: url("img/magia.png");
+    text-align: justify;
+    width: 40vw;
+}
+.projeto {
+    height: 500px;
+}
+a {
+    color: rgb(13, 16, 63);
+}
+table, tr, th {
+    border: 0.3vh solid #cfd1d3;
+    background-color: rgb(35, 206, 86);
+    margin: 10px;
+    
+}
+th {
+    padding: 10px;
+    height: 10px;
+}
+.dado {
+    height: 100px; 
+}
