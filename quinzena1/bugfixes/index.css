@@ -150,9 +150,10 @@ td button {
 .comprar:active {
     background-color: #8f7f37;
 }
-.texto {
-    border-bottom: 2px solid black;
-}
 input, button {
     outline: 0;
+}
+input {
+    border: 0;
+    border-bottom: 2px solid black;
 }
