@@ -1,0 +1,64 @@
+#pond {
+    display: flex;
+    justify-content: flex-end; /*Lv1*/
+    justify-content: center; /*Lv2*/
+    justify-content: space-around;  /*Lv3*/
+    justify-content: space-between;  /*Lv4*/
+    align-items: flex-end; /*Lv5*/
+    display: flex;
+    /*Lv6*/
+    justify-content: center;
+    align-items: center;
+    /*Lv7*/
+    justify-content: space-around;
+    align-items: flex-end;
+
+    flex-direction: row-reverse; /*Lv8*/
+    flex-direction: column; /*Lv9*/
+    /*Lv10*/
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    /*Lv11*/
+    flex-direction: column;
+    justify-content: flex-end;
+    /*Lv12*/
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    /*Lv13*/
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;  
+
+    flex-wrap: wrap; /* as LV 14, 15, 16, 17 são feitas em .yellow e .red */
+    /*Lv18*/
+    align-items: flex-start;
+    /*Lv19*/
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*Lv20*/
+    flex-flow: column wrap;
+
+    flex-wrap: wrap;
+    align-content: flex-start; /*Lv21*/
+    align-content: flex-end; /*Lv22*/
+    /*Lv23*/
+    flex-direction: column-reverse;
+    align-content: center;
+    /*Lv24*/
+    flex-flow: column-reverse wrap-reverse;
+    justify-content: center;
+    align-content: space-between;
+
+
+}
+
+.yellow {   
+    order: 1; /*Lv14*/
+    align-self: flex-end; /*Lv16*/
+    /*Lv17*/
+    order: 2;
+    align-self: flex-end;
+}
+.red {
+    order: -3 /*Lv15*/
+    }
