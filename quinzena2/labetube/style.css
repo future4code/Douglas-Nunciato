@@ -69,3 +69,6 @@ h2 {
     border: 0.3vh solid black;
     background: rgba(0, 0, 0, 0.6);
 }
+.devideo p {
+    padding: 10px;
+}
