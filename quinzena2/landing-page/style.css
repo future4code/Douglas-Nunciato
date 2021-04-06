@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+header {
+    background-color: #ff5c5c;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+main {
+    background-color: white;
+    padding: 10px;
+    margin: 4vw;
+}
+.logo {
+    height: auto;
+    width: 16vh;
+    border-radius: 25%;
+    border: 0.3vh solid black;
+}
+.social {
+    background-color: whitesmoke;
+    height: 25px;
+    width: auto;
+    border-radius: 25%;
+}
+main {
+    display:  grid;
+    grid-template-columns:  1fr 1fr 1fr;
+}
+footer {
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    width: 100vw;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+.centro {
+    text-align: center;
+}
+.form {
+    text-align: end;
+}
+.menu {
+    grid-column: 1 / -1;
+}
+li {
+    list-style-type: none;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+#catalogo, #home, #contato {
+    margin: 0 auto;
+    grid-gap: 2vh;
+    align-items: center;
+    text-align: center;
+}
+.capa {
+    width: 35vw;
+    height: auto;
+    border-radius: 25%;
+    border: 0.3vh solid #ff5c5c;
+}
+.carros {
+    width: 28vh;
+    height: auto;
+}
+.mapa {
+    width: 45vh;
+    height: auto;
+}
+.comum {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+@media screen and (min-width: 421px) and (max-width: 800px) {
+    main {
+        display:  grid;
+        grid-template-columns:  1fr 1fr;
+    }
+    .comun2 {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 420px) {
+    main {
+        display:  grid;
+        grid-template-columns:  1fr;
+    }
+}
