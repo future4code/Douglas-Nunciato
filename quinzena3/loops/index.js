@@ -64,45 +64,8 @@ console.log(novoArray)
 - **Imprima** este novo array */
 let arrayStrings = []
 for (let index = 0; index < array.length ; index++) {
-    //    se for apenas para imprimir no console seria assim e fim console.log("O elemento do índex", index, "é", array[index]) }
-    switch (index) {
-        case 0:
-            arrayStrings.push("'O elemento do índex 0 é 80'")
-        break
-        case 1:
-            arrayStrings.push("'O elemento do índex 1 é 30'")
-       break
-       case 2:
-            arrayStrings.push("'O elemento do índex 2 é 130'")
-        break
-        case 3:
-            arrayStrings.push("'O elemento do índex 3 é 40'")
-       break
-       case 4:
-            arrayStrings.push("'O elemento do índex 4 é 60'")
-        break
-        case 5:
-            arrayStrings.push("'O elemento do índex 5 é 21'")
-       break
-       case 6:
-            arrayStrings.push("'O elemento do índex 6 é 70'")
-        break
-        case 7:
-            arrayStrings.push("'O elemento do índex 7 é 120'")
-       break
-       case 8:
-            arrayStrings.push("'O elemento do índex 8 é 90'")
-        break
-        case 9:
-            arrayStrings.push("'O elemento do índex 9 é 103'")
-       break
-       case 10:
-            arrayStrings.push("'O elemento do índex 10 é 110'")
-        break
-        case 11:
-            arrayStrings.push("'O elemento do índex 11 é 55'")
-       break
-    }
+    //    agora aprendi a concatenar tudo em uma string entao o push vai funcionar
+    arrayStrings.push("O elemento do índex " + index + " é " + array[index])
     console.log(arrayStrings[index])
 }
 
