@@ -13,7 +13,7 @@
 //   Primeiro passo Inicio dar Cartas
 let cartaUser = []
 let cartaMesa = []
-    if(confirm("Quer iniciar uma nova rodada?")) {
+   while(confirm("Quer iniciar uma nova rodada?")) {
       let minhaMao = [comprarCarta(),comprarCarta()]
       
       while (minhaMao[0].valor && minhaMao[1].valor == 11) {
@@ -97,9 +97,8 @@ let cartaMesa = []
          window.alert("Suas cartas são  " + cartaUser +  ". Sua pontuação é " + totalUser + 
          "\nAs cartas do computador são  " + cartaMesa + ".  Pontuação do PC é " + totalMesa + "\nVocê é o Vencedor!")
       }
-   } else {
+   } 
       console.log("O jogo acabou")
-   }
-      
+    
     
    
