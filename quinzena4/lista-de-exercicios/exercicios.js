@@ -2,14 +2,23 @@
 
 function inverteArray(array) {
    const invertida = array.reverse()
-  return invertida
+   return invertida
 }
 console.log("Exercício 1: " + inverteArray([0, 8, 23, 16, 10, 15, 41, 12, 13]))
+
 //Exercício 2
 
 function retornaNumerosParesElevadosADois (array) {
-   // implemente sua lógica aqui
+   let novoArray = []
+   for (let numb of array) {
+      if ((numb % 2) === 0) {
+         numb = numb**2
+         novoArray.push(numb)
+      }
+   }
+   return novoArray
 }
+console.log("Exercício 2: "+ retornaNumerosParesElevadosADois([1, 2, 3, 4, 5, 6]))
 
 //Exercício 3
 
