@@ -36,8 +36,15 @@ console.log("Exercício 3: "+ retornaNumerosPares([1, 2, 3, 4, 5, 6]))
 //Exercício 4
 
 function retornaMaiorNumero(array) {
-   // implemente sua lógica aqui
+   let maiorNumero = -Infinity
+   for (let numb of array) {
+      if (numb > maiorNumero) {
+         maiorNumero = numb
+      }
+   }
+   return maiorNumero
 }
+console.log("Exercício 4: "+ retornaMaiorNumero([0, 8, 23, 16, 10, 15, 41, 12, 13]))
 
 //Exercício 5
 
