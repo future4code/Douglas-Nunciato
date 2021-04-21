@@ -49,9 +49,9 @@ console.log("Exercício 4: "+ retornaMaiorNumero([0, 8, 23, 16, 10, 15, 41, 12, 
 //Exercício 5
 
 function retornaQuantidadeElementos (array) {
-   // implemente sua lógica aqui
+   const numeroElementos = array.length
+   return numeroElementos
 }
-
 //Exercício 6
 
 function retornaExpressoesBooleanas() {
