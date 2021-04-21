@@ -4,6 +4,7 @@ function inverteArray(array) {
    const invertida = array.reverse()
   return invertida
 }
+console.log("Exercício 1: " + inverteArray([0, 8, 23, 16, 10, 15, 41, 12, 13]))
 //Exercício 2
 
 function retornaNumerosParesElevadosADois (array) {
