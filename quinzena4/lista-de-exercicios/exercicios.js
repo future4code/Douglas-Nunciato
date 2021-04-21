@@ -23,8 +23,15 @@ console.log("Exercício 2: "+ retornaNumerosParesElevadosADois([1, 2, 3, 4, 5, 6
 //Exercício 3
 
 function retornaNumerosPares (array) {
-   // implemente sua lógica aqui
+   let novoArray = []
+   for (let numb of array) {
+      if ((numb % 2) === 0) {
+         novoArray.push(numb)
+      }
+   }
+   return novoArray
 }
+console.log("Exercício 3: "+ retornaNumerosPares([1, 2, 3, 4, 5, 6]))
 
 //Exercício 4
 
