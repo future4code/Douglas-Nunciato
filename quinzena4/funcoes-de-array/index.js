@@ -91,32 +91,20 @@ function filtrarDespesas(){
 
 
     let despesasFiltradas // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
-    arrDespesas.filter((despesas)=> {
-        switch (tipoFiltro){
-            case "todos":
-                if (despesas.valor>=valorMin && despesas.valor<=valorMax){
-                    despesasFiltradas.push(despesas)
-                }
-            break
-            case "alimentação":
-                if (despesas.valor>=valorMin && despesas.valor<=valorMax){
-                    despesasFiltradas.push(despesas)
-                }
-            break
-            case "utilidades":
-                if (despesas.valor>=valorMin && despesas.valor<=valorMax){
-                    despesasFiltradas.push(despesas)
-                }
-            break
-            case "viagem":
-                if (despesas.valor>=valorMin && despesas.valor<=valorMax){
-                    despesasFiltradas.push(despesas)
-                }
-            break
+    despesasFiltradas = arrDespesas.filter((despesas)=> {
+        if (tipoFiltro == 'todos'){
+        return true
+        } else if (tipoFiltro == despesas.tipo){
+            return true
         }
-
+        return false
     })
-
+    despesasFiltradas = despesasFiltradas.filter((despesas)=> {
+        if (valorMin <= despesas.valor && valorMax >= despesas.valor){
+            return true
+        }
+        return false
+    })
     imprimirDespesas(despesasFiltradas)
 }
 
