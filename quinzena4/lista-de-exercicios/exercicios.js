@@ -292,15 +292,27 @@ const pessoas = [
 
 //Exercício 18, letra A
 
-function retornaPessoasAutorizadas(pessoas) {
-   // implemente sua lógica aqui
+function retornaPessoasAutorizadas() {
+   let autorizadas = []
+   for (const p of pessoas) {
+      if (p.altura >= 1.5 && p.idade > 14 && p.idade < 60) {
+         autorizadas.push(p)
+      }
+   }
+   return autorizadas
 }
 
 
 // Exercício 18, letra B
 
-function retornaPessoasNaoAutorizadas(pessoas) {
-   // implemente sua lógica aqui
+function retornaPessoasNaoAutorizadas() {
+   let naoAutorizadas = []
+   for (const pessoa of pessoas) {
+      if(pessoa.altura < 1.5 || pessoa.idade < 14 || pessoa.idade > 60) {
+         naoAutorizadas.push(pessoa)
+      }
+   }
+   return naoAutorizadas
 }
 
 //Exercício 19
@@ -312,8 +324,41 @@ const consultas = [
   { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
   ]
 
-function retornaEmailConsulta(consultas) {
-  // implemente sua lógica aqui
+function retornaEmailConsulta() {
+   return consultas.map((consulta) => {
+      let emailFinal = "Olá, "
+
+      if (!consulta.cancelada) {
+         if (consulta.genero === "feminino") {
+            emailFinal += "Sra. "
+         } else {
+            emailFinal += "Sr. "
+         }
+    
+          emailFinal += consulta.nome + ". "
+          emailFinal += "Estamos enviando esta mensagem para "
+    
+         if (consulta.genero === "feminino") {
+            emailFinal += "lembrá-la "
+         } else {
+            emailFinal += "lembrá-lo "
+         }
+         emailFinal += "da sua consulta no dia " + consulta.dataDaConsulta + ". "
+         emailFinal += "Por favor, acuse o recebimento deste-email."
+      } else {
+         if (consulta.genero === "feminino") {
+            emailFinal += "Sra. "
+         } else {
+            emailFinal += "Sr. "
+         }
+    
+         emailFinal += consulta.nome + ". "
+         emailFinal += "Infelizmente sua consulta marcada para o dia "
+         emailFinal += consulta.dataDaConsulta + " foi cancelada. "
+         emailFinal += "Se quiser, pode entrar em contato conosco para remarcá-la."
+      }
+        return emailFinal
+      });
 }
 
 //Exercício 20
