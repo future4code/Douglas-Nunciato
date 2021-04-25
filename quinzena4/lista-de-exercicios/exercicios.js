@@ -102,7 +102,7 @@ function comparaDoisNumeros(num1, num2) {
    }
 const deferenca = maiorN - menorN
 divisaoPossivel = (maiorN % menorN === 0)
-console.log(divisaoPossivel)
+
 return {
    maiorNumero: maiorN,
    maiorDivisivelporMenor: divisaoPossivel,
@@ -114,7 +114,39 @@ return {
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
-   // implemente sua lógica aqui
+   let maior = 0
+   let menor = Infinity
+   let segMaior = 0
+   let segMenor = Infinity
+   let indiceMenor
+   let indiceMaior
+   let novoArray = []
+
+   for (let i = 0; i < array.length ; i++){
+      if(array[i] < menor) {
+         menor = array[i]
+         indiceMenor = i
+      } 
+      if(array[i] > maior) {
+         maior = array[i]
+         indiceMaior = i
+      }
+   }
+   array.splice(indiceMaior, 1)
+   array.splice(indiceMenor, 1)
+
+   for (let index of array){
+      if(index < segMenor) {
+         segMenor = index
+      } 
+      if(index > segMaior) {
+         segMaior = index
+      }
+   }
+
+   novoArray.push(segMaior)
+   novoArray.push(segMenor)
+   return novoArray
 }
 
 //Exercício 11

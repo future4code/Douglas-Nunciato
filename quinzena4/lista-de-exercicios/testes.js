@@ -37,7 +37,6 @@ const arrayCompare = (arr1, arr2) => {
   return true
 }
 
-
 // Teste exercício 1
 
 function testEx1() {
@@ -428,9 +427,9 @@ function testEx19B() {
     { nome: "Pedro", dataDaConsulta: "02/07/2021" },
     { nome: "João",  dataDaConsulta: "01/10/2021" },
     { nome: "Paula", dataDaConsulta: "03/11/2021" }
-  ];
+  ]
 
-  if(arrayCompare(ordenaPorData(), output)) {
+  if (arrayCompare(ordenaPorData(), output)) {
     console.log('%c Você acertou a questão número 19B', 'color: #00FF00')
   } else {
     console.log('%c Você errou a questão número 19B', 'color: #CD0000')
