@@ -4,7 +4,7 @@ function inverteArray(array) {
    const invertida = array.reverse()
    return invertida
 }
-console.log("Exercício 1: " + inverteArray([0, 8, 23, 16, 10, 15, 41, 12, 13]))
+
 
 //Exercício 2
 
@@ -18,7 +18,6 @@ function retornaNumerosParesElevadosADois (array) {
    }
    return novoArray
 }
-console.log("Exercício 2: "+ retornaNumerosParesElevadosADois([1, 2, 3, 4, 5, 6]))
 
 //Exercício 3
 
@@ -31,7 +30,7 @@ function retornaNumerosPares (array) {
    }
    return novoArray
 }
-console.log("Exercício 3: "+ retornaNumerosPares([1, 2, 3, 4, 5, 6]))
+
 
 //Exercício 4
 
@@ -44,7 +43,7 @@ function retornaMaiorNumero(array) {
    }
    return maiorNumero
 }
-console.log("Exercício 4: "+ retornaMaiorNumero([0, 8, 23, 16, 10, 15, 41, 12, 13]))
+
 
 //Exercício 5
 
@@ -374,11 +373,11 @@ const contas = [
 
 function atualizaSaldo() {
    contas.forEach((conta) => {
-      let totalDeCompras = 0
+      let totalCompras = 0
       conta.compras.forEach((valor) => {
-        totalDeCompras += valor
+        totalCompras += valor
       })
-      conta.saldoTotal -= totalDeCompras
+      conta.saldoTotal -= totalCompras
     })
-    return contas
+   return contas
 }
