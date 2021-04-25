@@ -168,7 +168,13 @@ function ordenaArray(array) {
 // Exercício 12
 
 function filmeFavorito() {
-   // implemente sua lógica aqui
+   const filme = {
+      nome: 'À Procura da Felicidade',
+      ano: 2006,
+      diretor: 'Gabriele Muccino',
+      atores: ['Will Smith', 'Jaden Smith', 'Thandiwe Newton', 'Dan Castella']
+      }
+   return filme
 }
 
 // Exercício 13
