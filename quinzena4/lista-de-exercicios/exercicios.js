@@ -152,7 +152,17 @@ function segundoMaiorEMenor(array) {
 //Exercício 11
 
 function ordenaArray(array) {
-   // implemente sua lógica aqui
+   const len = array.length
+   for(let i = 0; i < len; i++) {
+      for(let x = 0; x < len; x++) {
+         if(array[x] > array[x + 1]) {
+            let tmp = array[x]
+            array[x] = array[x + 1]
+            array[x + 1] = tmp
+         }
+      }
+   }
+  return array
 }
 
 // Exercício 12
