@@ -169,24 +169,48 @@ function ordenaArray(array) {
 
 function filmeFavorito() {
    const filme = {
-      nome: 'À Procura da Felicidade',
+      nome: 'O Diabo Veste Prada',
       ano: 2006,
-      diretor: 'Gabriele Muccino',
-      atores: ['Will Smith', 'Jaden Smith', 'Thandiwe Newton', 'Dan Castella']
-      }
+      diretor: 'David Frankel',
+      atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci']
+   }
    return filme
 }
 
 // Exercício 13
 
 function imprimeChamada() {
-   // implemente sua lógica aqui
-}
+   const filme = {
+      nome: 'O Diabo Veste Prada',
+      ano: 2006,
+      diretor: 'David Frankel',
+      atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci']
+   }
+   let atoresOnly = ""
+
+   for (let i = 0; i < filme.atores.length; i++) {
+      if (i === filme.atores.length - 1) {
+         atoresOnly += filme.atores[i]
+      }else {  
+      atoresOnly += filme.atores[i] + ", "
+      }
+   }
+  
+   return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${atoresOnly}.`
+  }
 
 // Exercício 14
 
 function criaRetangulo(lado1, lado2) {
-   // implemente sua lógica aqui
+   const dadosRetangulo = {
+      largura: lado1,
+       altura: lado2,
+       perimetro: 2 * (lado1 + lado2),
+       area: lado1 * lado2
+     }
+   
+     return dadosRetangulo
+   }
 }
 
 // Exercício 15
