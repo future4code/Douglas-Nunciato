@@ -326,39 +326,39 @@ const consultas = [
 
 function retornaEmailConsulta() {
    return consultas.map((consulta) => {
-      let emailFinal = "Olá, "
+   let emailNovo = "Olá, "
 
-      if (!consulta.cancelada) {
-         if (consulta.genero === "feminino") {
-            emailFinal += "Sra. "
-         } else {
-            emailFinal += "Sr. "
-         }
-    
-          emailFinal += consulta.nome + ". "
-          emailFinal += "Estamos enviando esta mensagem para "
-    
-         if (consulta.genero === "feminino") {
-            emailFinal += "lembrá-la "
-         } else {
-            emailFinal += "lembrá-lo "
-         }
-         emailFinal += "da sua consulta no dia " + consulta.dataDaConsulta + ". "
-         emailFinal += "Por favor, acuse o recebimento deste-email."
+   if (!consulta.cancelada) {
+      if (consulta.genero === "feminino") {
+         emailNovo += "Sra. "
       } else {
-         if (consulta.genero === "feminino") {
-            emailFinal += "Sra. "
-         } else {
-            emailFinal += "Sr. "
-         }
-    
-         emailFinal += consulta.nome + ". "
-         emailFinal += "Infelizmente sua consulta marcada para o dia "
-         emailFinal += consulta.dataDaConsulta + " foi cancelada. "
-         emailFinal += "Se quiser, pode entrar em contato conosco para remarcá-la."
+         emailNovo += "Sr. "
       }
-        return emailFinal
-      });
+         
+      emailNovo += consulta.nome + ". "
+      emailNovo += "Estamos enviando esta mensagem para "
+    
+      if (consulta.genero === "feminino") {
+         emailNovo += "lembrá-la "
+      } else {
+         emailNovo += "lembrá-lo "
+      }
+      emailNovo += "da sua consulta no dia " + consulta.dataDaConsulta + ". "
+      emailNovo += "Por favor, acuse o recebimento deste-email."
+      } else {
+      if (consulta.genero === "feminino") {
+         emailNovo += "Sra. "
+      } else {
+         emailNovo += "Sr. "
+      }
+    
+      emailNovo += consulta.nome + ". "
+      emailNovo += "Infelizmente sua consulta marcada para o dia "
+      emailNovo += consulta.dataDaConsulta + " foi cancelada. "
+      emailNovo += "Se quiser, pode entrar em contato conosco para remarcá-la."
+   }
+   return emailNovo
+   });
 }
 
 //Exercício 20
@@ -373,5 +373,12 @@ const contas = [
 ]
 
 function atualizaSaldo() {
-  // implemente sua lógica aqui
+   contas.forEach((conta) => {
+      let totalDeCompras = 0
+      conta.compras.forEach((valor) => {
+        totalDeCompras += valor
+      })
+      conta.saldoTotal -= totalDeCompras
+    })
+    return contas
 }
