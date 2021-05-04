@@ -1,0 +1,17 @@
+.smallcard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    border: 1px solid black;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    height: 100px;
+}
+.smallcard-container h4 {
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+
+.smallcard-container > div {
+    display: flex;
+}
