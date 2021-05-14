@@ -28,6 +28,10 @@ background-color: whitesmoke;
   color: white;
 }
 `
+const MinhasTarefas = styled.div `
+font-weight: bold;
+
+`
 
 class App extends React.Component {
     state = {
@@ -138,9 +142,9 @@ class App extends React.Component {
 
 
               >
-                <div>{tarefa.texto}
+                <MinhasTarefas>{tarefa.texto}
 
-                </div>
+                </MinhasTarefas>
 
 
               </Tarefa>
