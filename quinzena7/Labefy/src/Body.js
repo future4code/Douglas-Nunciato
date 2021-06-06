@@ -25,6 +25,7 @@ export default class Body extends React.Component {
     } 
     mudaBotaoHome = () =>{
         this.setState({botaoHome : true})
+
     }
 
      

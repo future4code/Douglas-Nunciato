@@ -29,7 +29,7 @@ export default class Header extends React.Component {
                 {this.props.botaoHome ? (<button onClick={this.props.IrparaAdd}>Adicionar PlayList</button>
                      
                 ):(<button onClick={this.props.IrparaHome}>HOME</button>)}
-                <button onClick={this.props.IrparaHome}>HOME</button>
+
               
               
                

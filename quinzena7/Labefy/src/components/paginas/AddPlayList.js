@@ -28,7 +28,7 @@ export default class AddPlayList extends React.Component {
     }
     
     render () {
-        console.log(this.state.InputPlaylist)
+        
         return (
             <div>
                 <input type="text" 

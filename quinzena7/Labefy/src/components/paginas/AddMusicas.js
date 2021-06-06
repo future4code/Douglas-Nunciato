@@ -74,7 +74,7 @@ export default class AddMusicas extends React.Component {
 
             })
             .catch((erro) => {
-                console.log(erro)
+                alert(erro)
             })
     }
 

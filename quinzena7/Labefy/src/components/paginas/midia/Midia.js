@@ -32,7 +32,7 @@ export default class Midia extends React.Component {
             
         })
         this.setState({IdPlaylist: id})
-       
+        this.props.mudabotaoHome()
        
     }
     deletarMusica= (id)=>{
@@ -40,6 +40,8 @@ export default class Midia extends React.Component {
             let idPlaylist = this.state.IdPlaylist
             axios.delete(`${URL}/${idPlaylist}/tracks/${id}`, header)
             .then((res)=>{
+                this.ChamaPlaylist()
+                console.log(res)
             })
             this.ChamaPlaylist()
             .catch((erro)=>{
@@ -51,10 +53,11 @@ export default class Midia extends React.Component {
         if (window.confirm("Deseja deletar essa Playlist mesmo?")){
             axios.delete(`${URL}/${id}`, header)
             .then((res)=> {
-            console.log(res)
+                this.ChamaPlaylist()
+                console.log(res)
             })
             .catch((erro)=>{
-             alert(erro)
+                alert(erro)
             })
             this.ChamaPlaylist()
         }
