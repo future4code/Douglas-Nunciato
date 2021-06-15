@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 
-const DivHeader = styled.div`
+const DivMatchList = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,16 +12,15 @@ const DivHeader = styled.div`
 
   } */
 `
-const HeaderH1 = styled.h1`
+const MatchH2 = styled.h2`
 
 `
 
-export default function Header () {
+export default function MatchList () {
     return (
-        <DivHeader>
-            <button/>
-            <HeaderH1>AstroMatch</HeaderH1>
-            <button/>
-        </DivHeader>
+        <DivMatchList>
+            <MatchH2>Pessoas com Match</MatchH2>
+
+        </DivMatchList>
     )
 }
