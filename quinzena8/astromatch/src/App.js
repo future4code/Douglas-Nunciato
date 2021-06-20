@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
-import Header from './components/Header';
-import MatchList from './components/MatchList';
-import Page1 from './components/Page1';
+import Header from './components/Header/Header';
+import MatchList from './Pages/MatchList/MatchList';
+import Page1 from './Pages/Page1/Page1';
 
 const DivAdd = styled.div`
   color: black;
@@ -17,6 +17,7 @@ const DivAdd = styled.div`
 `
 
 function App() {
+  
   return (
     <DivAdd>
       <Header/>

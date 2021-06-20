@@ -7,7 +7,8 @@ const DivMatchList = styled.div`
     align-items: center;
     padding: 5px;
     grid-column: 2 / 3;
-    border: 0.2rem solid gray;
+    border: 1px solid gray;
+    border-radius: 3px;
     /* @media screen and (max-width: 620px) {
 
   } */
