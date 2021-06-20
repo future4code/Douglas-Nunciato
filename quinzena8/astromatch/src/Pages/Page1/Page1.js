@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import Card from '../../components/Card/Card'
 import axios from 'axios';
-import {URL} from '../../constants/URL'
+import { URL, header } from '../../constants/URL'
 
 const DivPage1 = styled.div`
     display: flex;
@@ -24,7 +24,7 @@ const ImagemPage1 = styled.img`
 
 
 export default function Page1() {
-    const [people, setPeople] = useState({})
+    const [people, setPeople] = useState(undefined)
 
     const getPeople = () => {
         if (people === null) {
@@ -34,11 +34,36 @@ export default function Page1() {
         } else {
             axios.get(`${URL}/person`).then((res) => {
                 setPeople(res.data.profile)
-            
+
             }).catch((error) => {
                 alert(error)
             })
         }
+    }
+    const choicePeople = (choice) => {
+        const body = {
+            choice: choice,
+            id: people.id
+        }
+        setPeople(undefined)
+        
+        axios.post(`${URL}/choose-person`, body, header)
+            .then((res) => {
+                if (res.data.isMatch) {
+                    alert("Deu Match!!");
+                }
+                getPeople();
+            })
+            .catch((err) => {
+                alert(err);
+            })
+    }
+    const onClickNao = () => {
+        choicePeople(false)
+
+    }
+    const onClickCurti = () => {
+        choicePeople(true)
     }
 
     useEffect(() => {
@@ -47,15 +72,19 @@ export default function Page1() {
 
     return (
         <DivPage1>
-            <Card
-                photo={people.photo}
-                name={people.name}
-                age={people.age}
-                bio={people.bio}
-            />
-            <div>
-                <button>NAO</button> <button>Curtir</button>
-            </div>
+            {people ?
+               ( <>
+                    <Card
+                        photo={people.photo}
+                        name={people.name}
+                        age={people.age}
+                        bio={people.bio}
+                    />
+                    <div>
+                        <button onClick={onClickNao}>NAO</button> <button onClick={onClickCurti}>Curtir</button>
+                    </div>
+                </>) : <p>Carregando ...</p>
+            }
         </DivPage1>
     )
 }

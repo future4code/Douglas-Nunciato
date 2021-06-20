@@ -17,12 +17,12 @@ const HeaderH1 = styled.h1`
 
 `
 
-export default function Header () {
+export default function Header (props) {
     return (
         <DivHeader>
-            <button>1 Page1</button>
+            <button onClick={props.goToPage1}> 1 Page1</button>
             <HeaderH1>AstroMatch</HeaderH1>
-            <button>2 MartchList</button>
+            <button onClick={props.goToMatchListPage}>2 MartchList</button>
         </DivHeader>
     )
 }

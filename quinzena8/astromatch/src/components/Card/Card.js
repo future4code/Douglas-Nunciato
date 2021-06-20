@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 
 const DivCard= styled.div`
+    background-color: lightblue;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -15,7 +16,6 @@ const DivCard= styled.div`
   } */
 `
 const DivImga= styled.div`
-
     display: flex;
     justify-content:center;
     /* @media screen and (max-width: 620px) {
@@ -23,13 +23,13 @@ const DivImga= styled.div`
   } */
 `
 
-export default function Card (prop) {
+export default function Card (props) {
     
     return <DivCard>
         <DivImga>
-            <img width="auto" height="320vh" src={prop.photo} alt="foto" />
+            <img width="auto" height="320vh" src={props.photo} alt="foto" />
          </DivImga>
-         <p>{prop.name}</p>
-         <p>{prop.bio}</p>
+         <p>{props.name}</p>
+         <p>{props.bio}</p>
     </DivCard>
 }

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import Header from './components/Header/Header';
-import MatchList from './Pages/MatchList/MatchList';
+import MatchListPage from './Pages/MatchListPage/MatchListPage';
 import Page1 from './Pages/Page1/Page1';
 
 const DivAdd = styled.div`
@@ -17,12 +17,33 @@ const DivAdd = styled.div`
 `
 
 function App() {
-  
+  const [selectedPage, setSelectedPage] = useState('page1')
+
+  const renderPage = () =>{
+    switch(selectedPage) { 
+      case 'page1' :
+        return <Page1/>
+      case 'matchList' :
+        return <MatchListPage/>
+      default: 
+      return <Page1/>
+    }
+  }
+  const goToPage1 = () => {
+    setSelectedPage('page1')
+  }
+  const goToMatchListPage = () => {
+    setSelectedPage('matchList')
+  }
+
   return (
     <DivAdd>
-      <Header/>
-      <Page1/>
-      <MatchList/>
+      <Header
+        goToPage1={goToPage1}
+        goToMatchListPage={goToMatchListPage}
+      />
+      {renderPage()}
+      
     </DivAdd>
   )
 }
