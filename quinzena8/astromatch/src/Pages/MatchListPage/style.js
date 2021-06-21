@@ -31,4 +31,5 @@ export const PhotoMatch = styled.img`
     object-position: center;
     grid-column: 1/2;
     grid-row: 2 / 4;
+    object-fit: scale-down;
 `
