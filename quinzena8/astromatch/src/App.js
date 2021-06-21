@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import {DivApp} from './styleApp'
 import Header from './components/Header/Header';
 import MatchListPage from './Pages/MatchListPage/MatchListPage';
 import Page1 from './Pages/Page1/Page1';
 
-const DivAdd = styled.div`
-  color: black;
-  width: auto;
-  height: 94vh;
-  display: grid;
-  
-  grid-template-columns: 30% 40% 30%;
-  grid-template-rows: 20% 60% 20%;
-  padding: 10px;
 
-`
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('page1')
@@ -37,14 +27,14 @@ function App() {
   }
 
   return (
-    <DivAdd>
+    <DivApp>
       <Header
         goToPage1={goToPage1}
         goToMatchListPage={goToMatchListPage}
       />
       {renderPage()}
       
-    </DivAdd>
+    </DivApp>
   )
 }
 

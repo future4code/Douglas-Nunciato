@@ -1,28 +1,30 @@
 import React from 'react';
-import styled from 'styled-components'
+import { DivHeader, HeaderH1, TituloAudio } from './style'
+import Button from '@material-ui/core/Button';
+import AudioPlayer from 'material-ui-audio-player';
 
-const DivHeader = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px;
-    grid-column: 2 / 3;
-    border: 1px solid gray;
-    border-radius: 3px;
-    /* @media screen and (max-width: 620px) {
 
-  } */
-`
-const HeaderH1 = styled.h1`
-
-`
-
-export default function Header (props) {
+export default function Header(props) {
+   
     return (
         <DivHeader>
-            <button onClick={props.goToPage1}> 1 Page1</button>
-            <HeaderH1>AstroMatch</HeaderH1>
-            <button onClick={props.goToMatchListPage}>2 MartchList</button>
+            <Button variant="contained" color="primary" onClick={props.goToPage1}> Home</Button>
+            <TituloAudio>
+                <HeaderH1>AstroMatch</HeaderH1>
+                <AudioPlayer
+                    elevation={1}
+                    width="125%"
+                    variation="primary"
+                    spacing={1}
+                    download={false}
+                    autoplay={true}
+                    order="standart"
+                    preload="auto"
+                    loop={false}
+                    src={"https://drive.google.com/uc?id=1W3obBCqEVPWmaDnTPXD8rQCafriF0YkR&export=.mp3"}
+                />
+            </TituloAudio>
+            <Button variant="contained" color="secondary" onClick={props.goToMatchListPage}>List S2</Button>
         </DivHeader>
     )
 }

@@ -1,39 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components'
+import {DivMatchList, MatchH2, ListPeope, PhotoMatch} from './style'
 import axios from 'axios';
 import { URL, header } from '../../constants/URL'
+import Button from '@material-ui/core/Button';
 
-const DivMatchList = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
-    border: 1px solid gray;
-    border-radius: 3px;
-    overflow-y: auto;
-    /* @media screen and (max-width: 620px) {
 
-  } */
-`
-const MatchH2 = styled.h2`
-
-`
-const ListPeope = styled.div`
-    display: flex;
-    border: 1px solid gray;
-    border-radius: 3px;
-    padding: 5px;
-`
-const PhotoMatch = styled.img`
-    margin: 5px;
-    border-radius: 40%;
-    width: 30px;
-    height: 30px;
-    object-position: center;
-    grid-column: 1/2;
-    grid-row: 2 / 4;
-`;
 
 export default function MatchListPage() {
     const [matchList, setMatchList] = useState([])
@@ -77,7 +48,7 @@ export default function MatchListPage() {
             ) : (
                 <p>Carregando ...</p>
             )}
-            <button onClick={reset}>Reset</button>
+            <Button variant="contained" color="secondary" onClick={reset}>Reset</Button>
         </DivMatchList>
     )
 }

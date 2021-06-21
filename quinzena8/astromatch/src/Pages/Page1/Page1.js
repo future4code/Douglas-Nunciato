@@ -1,35 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components'
+import {DivPage1, BotoesCampo} from './style'
 import Card from '../../components/Card/Card'
 import axios from 'axios';
 import { URL, header } from '../../constants/URL'
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import ClearIcon from '@material-ui/icons/Clear';
 
-const DivPage1 = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 5px;
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
-    border: 1px solid gray;
-    border-radius: 3px;
-    /* @media screen and (max-width: 620px) {
 
-  } */
-`
-const ImagemPage1 = styled.img`
-
-`
 
 
 export default function Page1() {
     const [people, setPeople] = useState(undefined)
+    const [animation, setAnimation] = useState("")
 
     const getPeople = () => {
+        setAnimation("")
         if (people === null) {
             alert(
-                "NINGUEM"
+                "Acabou as pessoas para curiti."
             )
         } else {
             axios.get(`${URL}/person`).then((res) => {
@@ -45,7 +33,7 @@ export default function Page1() {
             choice: choice,
             id: people.id
         }
-        setPeople(undefined)
+        
         
         axios.post(`${URL}/choose-person`, body, header)
             .then((res) => {
@@ -57,13 +45,16 @@ export default function Page1() {
             .catch((err) => {
                 alert(err);
             })
+
     }
     const onClickNao = () => {
         choicePeople(false)
+        setAnimation("esquerda")
 
     }
     const onClickCurti = () => {
         choicePeople(true)
+        setAnimation("direita")
     }
 
     useEffect(() => {
@@ -75,14 +66,16 @@ export default function Page1() {
             {people ?
                ( <>
                     <Card
+                        animation={animation}
                         photo={people.photo}
                         name={people.name}
                         age={people.age}
                         bio={people.bio}
                     />
-                    <div>
-                        <button onClick={onClickNao}>NAO</button> <button onClick={onClickCurti}>Curtir</button>
-                    </div>
+                    <BotoesCampo>
+                        <ClearIcon className="botaoNao" fontSize="large" color="secondary" onClick={onClickNao}>NAO</ClearIcon> 
+                        <CheckCircleIcon className="botaoCurti" fontSize="large" onClick={onClickCurti}>Curtir</CheckCircleIcon>
+                    </BotoesCampo>
                 </>) : <p>Carregando ...</p>
             }
         </DivPage1>
